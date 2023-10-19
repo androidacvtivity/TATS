@@ -319,6 +319,7 @@ BEGIN
               WHERE
                 R.CUIIO_VERS <= vPERIOADA AND
                 FC.FORM IN (vFORM)
+                AND FC.ID_SCHEMA =vID_SCHEMA
               GROUP BY
                 R.CUIIO) D ON (R.CUIIO=D.CUIIO AND R.CUIIO_VERS=D.CUIIO_VERS)
           WHERE
